@@ -1,0 +1,77 @@
+.LightBox {
+  background-color: white;
+  max-width: 50%;
+  margin: 5% auto 0 auto;
+  outline: 0;
+  padding: 30px 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.LightBox__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.LightBox__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.LightBox__prev,
+.LightBox__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.LightBox__prev {
+  left: -50px;
+}
+
+.LightBox__next {
+  right: -50px;
+}
+
+.ReactModal__Content,
+.ReactModal__Overlay {
+  transition-duration: 250ms;
+  transition-timing-function: ease-in;
+}
+
+.ReactModal__Content,
+.ReactModal__Overlay,
+.ReactModal__Content--before-close,
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content--after-open,
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Content {
+  transform: translateY(-30%);
+  transition-property: all;
+}
+
+.ReactModal__Content--after-open {
+  transform: translateY(0);
+}
+
+.ReactModal__Content--before-close {
+  transform: translateY(-30%);
+}
+
+.ReactModal__Overlay {
+  transition-property: opacity;
+}
